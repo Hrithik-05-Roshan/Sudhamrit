@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Menu — Sudhamrit Banquet &amp; Restaurant | Asansol, West Bengal</title>
+  <meta name="description" content="Explore our full digital food menu at Sudhamrit, Bastin Bazar, Asansol. Royal Bengali mutton kosha, tandoori kebabs, Awadhi biryanis, pure veg delicacies & thalis." />
+  <meta name="keywords" content="Sudhamrit menu Asansol, food menu Asansol, biryani price Asansol, mutton kosha Asansol, vegetarian dishes Bastin Bazar" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Food Menu — Sudhamrit Banquet &amp; Restaurant Asansol" />
+  <meta property="og:description" content="Authentic Indian, Bengali & Tandoori delicacies in Bastin Bazar, Asansol. Call +91 98518 17979." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#040406" />
+
+  <!-- Google Fonts: Inter (TT Interphases), Plus Jakarta Sans, Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: "#040406",
+            obsidian: "#08080c",
+            surface: "#0e0f15",
+            "surface-elevated": "#14161f",
+            gold: {
+              300: "#ffea9f",
+              400: "#f5d061",
+              500: "#c89a1c",
+              light: "#fff0b3"
+            },
+            ivory: "#f8f6f0",
+            muted: "#d8d4c8"
+          },
+          fontFamily: {
+            sans: ["'TT Interphases Pro'", "'Inter'", "system-ui", "sans-serif"],
+            serif: ["'Cormorant Garamond'", "Georgia", "serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP & Lucide Icons CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-noir text-ivory font-sans antialiased selection:bg-gold-400/40 selection:text-black">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Announcement Bar -->
+  <div id="topbar" class="bg-noir/95 border-b border-gold-400/20 py-2 px-4 sm:px-6 text-xs z-50 relative">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Live Kitchen Status -->
+      <div class="live-status-container flex items-center">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
+          <span class="live-dot"></span>
+          Kitchen Open Daily &middot; 12:00 PM &ndash; 10:00 PM
+        </span>
+      </div>
+
+      <!-- Quick Desk Phone & Directions -->
+      <div class="flex items-center gap-4 text-[#d8d4c8] text-xs font-medium">
+        <a href="index.html#visit" class="hidden sm:flex items-center gap-1.5 hover:text-gold-400 transition-colors">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span>Bastin Bazar, G.T. Road</span>
+        </a>
+        <a href="tel:+919851817979" class="flex items-center gap-1.5 text-gold-400 hover:text-white transition-colors font-bold">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span>+91 98518 17979</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Primary Sticky Header -->
+  <header id="site-header" class="sticky top-0 z-40 w-full transition-all duration-300 border-b border-gold-400/20 bg-noir/95 backdrop-blur-xl">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4" aria-label="Main Navigation">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group" aria-label="Sudhamrit Home">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-gold-500 via-gold-400 to-amber-200 flex items-center justify-center text-noir font-serif text-lg font-bold shadow-md shadow-gold-400/30 group-hover:scale-105 transition-transform duration-300 border border-gold-light/50">
+          S
+        </div>
+        <div class="leading-tight">
+          <div class="font-serif text-lg font-bold tracking-widest text-white uppercase group-hover:text-gold-300 transition-colors">
+            Sudhamrit
+          </div>
+          <div class="text-[9px] tracking-[0.22em] text-gold-400 uppercase font-semibold">
+            Food Menu &middot; Asansol
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden md:flex items-center gap-6 text-xs uppercase tracking-wider text-[#d8d4c8] font-semibold">
+        <li><a href="index.html" class="hover:text-gold-400 transition-colors py-1">Home</a></li>
+        <li><a href="index.html#signatures" class="hover:text-gold-400 transition-colors py-1">Signatures</a></li>
+        <li><a href="menu.html" class="text-gold-400 font-bold py-1 border-b-2 border-gold-400">Food Menu</a></li>
+        <li><a href="index.html#banquet" class="hover:text-gold-400 transition-colors py-1">Banquets</a></li>
+        <li><a href="index.html#reviews" class="hover:text-gold-400 transition-colors py-1">Reviews</a></li>
+        <li><a href="index.html#visit" class="hover:text-gold-400 transition-colors py-1">Location</a></li>
+      </ul>
+
+      <!-- Right CTAs & Mobile Hamburger -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="tel:+919851817979" class="hidden sm:inline-flex btn-gold-luxury text-xs py-2 px-3.5 font-bold shadow-md">
+          <i data-lucide="phone" class="w-3.5 h-3.5 mr-1.5"></i>
+          Order / Reserve
+        </a>
+
+        <!-- Mobile Drawer Toggle Button -->
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg bg-surface border border-gold-400/30 text-gold-400 hover:text-white" aria-label="Open mobile menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-noir/98 border-l border-gold-400/30 p-6 flex flex-col justify-between shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-gold-400/20 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-gold-400 flex items-center justify-center text-noir font-serif font-bold">S</div>
+          <span class="font-serif text-lg font-bold text-white tracking-widest uppercase">Sudhamrit</span>
+        </div>
+        <button id="mobile-drawer-close" class="p-1.5 rounded-lg text-white/70 hover:text-white" aria-label="Close menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-3">
+        <a href="index.html" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2 border-b border-white/5">
+          Home &middot; Overview
+        </a>
+        <a href="menu.html" class="mobile-link block text-sm font-bold text-gold-400 py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Digital Food Menu</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-gold-400/20 text-gold-400 font-mono">33 Dishes</span>
+        </a>
+        <a href="index.html#signatures" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2 border-b border-white/5">
+          Chef Signatures
+        </a>
+        <a href="index.html#banquet" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2 border-b border-white/5">
+          Banquet &amp; Marriage Hall
+        </a>
+        <a href="index.html#gallery" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2 border-b border-white/5">
+          Visual Gallery
+        </a>
+        <a href="index.html#reviews" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2 border-b border-white/5">
+          Guest Reviews
+        </a>
+        <a href="index.html#visit" class="mobile-link block text-sm font-semibold text-white/90 hover:text-gold-400 py-2">
+          Find Us on G.T. Road
+        </a>
+      </nav>
+    </div>
+
+    <div class="space-y-3 pt-6 border-t border-gold-400/20">
+      <a href="tel:+919851817979" class="btn-gold-luxury w-full text-center py-3 text-xs font-bold block">
+        Direct Desk (+91 98518 17979)
+      </a>
+      <a href="https://wa.me/919851817979" target="_blank" rel="noopener noreferrer" class="btn-outline-luxury w-full text-center py-2.5 text-xs font-semibold block text-emerald-400 border-emerald-500/40">
+        WhatsApp Table Booking
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================== COMPACT MENU HERO HEADER ======================== -->
+    <section class="pt-8 sm:pt-10 pb-6 bg-gradient-to-b from-noir to-obsidian border-b border-gold-400/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <!-- Breadcrumb & Badge -->
+        <div class="flex items-center justify-center gap-2 mb-2 text-[11px] text-[#aba698]">
+          <a href="index.html" class="hover:text-gold-400 transition-colors">Home</a>
+          <span>&rsaquo;</span>
+          <span class="text-gold-400 font-bold">Food Menu</span>
+        </div>
+
+        <h1 class="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-wide mb-2">
+          The Royal <em class="italic text-gold-shimmer">Food Menu.</em>
+        </h1>
+        
+        <p class="text-xs sm:text-sm text-[#d8d4c8] max-w-xl mx-auto leading-relaxed">
+          Slow-cooked Bengali delicacies, fragrant Awadhi Dum biryanis, pure tandoori roasts, and pure vegetarian dishes. Tap any dish for spice profiles and pairings.
+        </p>
+
+        <!-- Quick Trust Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4 text-[11px] text-[#d8d4c8] font-medium">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface border border-gold-400/25">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Pure Veg &amp; Non-Veg Separate Kitchens
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface border border-gold-400/25">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span> Fresh Daily Ingredients &middot; Bastin Bazar
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================== STICKY CONTROLS & FILTER TOOLBAR ======================== -->
+    <section class="sticky top-[57px] sm:top-[65px] z-30 bg-noir/95 backdrop-blur-xl border-b border-gold-400/20 py-3 shadow-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2.5">
+        
+        <!-- 1. Horizontal Category Pill Slider (Frictionless Touch-Scrollable) -->
+        <div class="flex justify-start sm:justify-center overflow-x-auto no-scrollbar py-0.5 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div class="filter-tabs-wrapper max-w-full inline-flex gap-1.5 shrink-0">
+            <button class="cat-tab-btn active text-xs py-1.5 px-3" data-cat="all">All Dishes</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="signature">✦ Signatures</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="veg">Vegetarian</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="chicken">Chicken</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="mutton">Mutton</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="fish">Fish / Seafood</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="biryani">Biryani</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="chinese">Indo-Chinese</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="tandoori">Tandoor</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="thali">Royal Thalis</button>
+            <button class="cat-tab-btn text-xs py-1.5 px-3" data-cat="breads">Breads</button>
+          </div>
+        </div>
+
+        <!-- 2. Compact Search & Dietary Filter Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 pt-1">
+          
+          <!-- Search Input -->
+          <div class="relative w-full sm:w-72 md:w-80">
+            <input 
+              type="search" 
+              id="menu-search" 
+              placeholder="Search dish name, spice, or gravy..." 
+              class="luxury-input pl-9 pr-8 text-xs py-2 w-full" 
+              aria-label="Search Dishes"
+            />
+            <i data-lucide="search" class="w-3.5 h-3.5 text-gold-400/80 absolute left-3 top-1/2 -translate-y-1/2"></i>
+            <button id="clear-search" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-base" aria-label="Clear Search">
+              &times;
+            </button>
+          </div>
+
+          <!-- Dietary Radios (All / Veg Only / Non-Veg) & Live Counter -->
+          <div class="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-2.5">
+            <div class="flex items-center gap-1 p-0.5 rounded-lg bg-surface border border-gold-400/20 text-xs font-semibold">
+              <label class="cursor-pointer px-2.5 py-1 rounded-md text-[11px] font-bold transition-colors has-[:checked]:bg-gold-400 has-[:checked]:text-noir">
+                <input type="radio" name="dietary-filter" value="all" checked class="hidden" />
+                All
+              </label>
+              <label class="cursor-pointer px-2.5 py-1 rounded-md text-[11px] font-bold transition-colors has-[:checked]:bg-emerald-600 has-[:checked]:text-white flex items-center gap-1">
+                <input type="radio" name="dietary-filter" value="veg" class="hidden" />
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Veg
+              </label>
+              <label class="cursor-pointer px-2.5 py-1 rounded-md text-[11px] font-bold transition-colors has-[:checked]:bg-red-700 has-[:checked]:text-white flex items-center gap-1">
+                <input type="radio" name="dietary-filter" value="nonveg" class="hidden" />
+                <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span> Non-Veg
+              </label>
+            </div>
+
+            <div id="menu-count-badge" class="px-2.5 py-1 rounded-md bg-gold-400/15 border border-gold-400/30 text-gold-400 font-mono text-[11px] font-bold whitespace-nowrap">
+              33 Dishes
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================== COMPACT, LESS DETAILED MENU GRID ======================== -->
+    <section class="py-6 sm:py-8 md:py-10 bg-noir">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        
+        <!-- Smaller Item Cards in 2-Column (Mobile) to 4-Column (Desktop) Grid -->
+        <div id="menu-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4"></div>
+
+        <!-- No Results Fallback -->
+        <div id="menu-no-results" class="hidden text-center py-16">
+          <div class="font-serif text-2xl text-white/40 mb-2">No Delicacies Found</div>
+          <p class="text-xs text-[#d8d4c8] max-w-sm mx-auto">
+            Try clearing your search query or selecting "All" in the dietary selector.
+          </p>
+        </div>
+
+        <!-- Banquet & Party Catering Callout Banner -->
+        <div class="mt-8 sm:mt-12 p-4 sm:p-6 rounded-2xl bg-surface-elevated border border-gold-400/25 flex flex-col sm:flex-row items-center justify-between gap-4 dish-shadow">
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-gold-400/15 border border-gold-400/40 flex items-center justify-center text-gold-400 shrink-0">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-serif text-base sm:text-lg font-bold text-white">Hosting a Wedding Reception or Party in Asansol?</div>
+              <p class="text-xs text-[#aba698] mt-0.5">
+                Our dual AC banquet halls accommodate 60 to 500+ guests with customized multi-cuisine catering packages.
+              </p>
+            </div>
+          </div>
+          <a href="index.html#banquet" class="btn-gold-luxury shrink-0 text-xs py-3 px-5 font-bold shadow-md">
+            Explore Banquet Halls &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================== CHEF'S SPOTLIGHT DISH MODAL (INTERACTIVE TAP DETAILS) ======================== -->
+  <div id="dish-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+    <div id="dish-modal-content" class="relative max-w-lg w-full bg-surface-elevated rounded-2xl border border-gold-400/40 p-5 sm:p-7 dish-shadow">
+      <button onclick="closeDishModal()" class="absolute top-4 right-4 text-white/60 hover:text-white p-1" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-3">
+        <span id="modal-dish-type" class="menu-badge-veg"></span>
+        <span id="modal-dish-badge" class="px-2.5 py-0.5 rounded bg-gold-400/25 text-gold-400 text-[10px] font-bold tracking-wider uppercase"></span>
+      </div>
+
+      <div class="flex items-baseline justify-between gap-4 mb-2">
+        <h3 id="modal-dish-name" class="font-serif text-xl sm:text-2xl text-white font-bold"></h3>
+        <span id="modal-dish-price" class="font-mono text-xl text-gold-400 font-bold"></span>
+      </div>
+
+      <p id="modal-dish-desc" class="text-xs sm:text-sm text-[#e8e5dc] leading-relaxed mb-4 font-normal"></p>
+
+      <div class="p-3.5 rounded-xl bg-noir/90 border border-gold-400/25 space-y-1.5 mb-5 text-xs font-semibold">
+        <div class="flex justify-between">
+          <span class="text-[#aba698]">Spice Profile:</span>
+          <span id="modal-dish-spice" class="text-gold-400"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-[#aba698]">Chef Pairing:</span>
+          <span id="modal-dish-pairing" class="text-white"></span>
+        </div>
+      </div>
+
+      <div class="flex gap-2.5">
+        <a href="tel:+919851817979" class="btn-gold-luxury flex-1 text-xs py-3 text-center font-bold flex items-center justify-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>Order / Reserve Desk</span>
+        </a>
+        <button onclick="closeDishModal()" class="btn-outline-luxury text-xs py-3 px-4 font-semibold">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== LUXURY FOOTER (WITH REAL BRAND ICONS) ======================== -->
+  <footer class="bg-noir border-t border-gold-400/25 pt-10 pb-8 text-[#d8d4c8] text-xs">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Brand Description -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gold-400 flex items-center justify-center text-noir font-serif font-bold text-sm shadow-md">S</div>
+            <div class="font-serif text-lg font-bold text-white tracking-widest uppercase">Sudhamrit</div>
+          </div>
+          <p class="text-[#aba698] leading-relaxed text-xs">
+            Asansol&rsquo;s celebrated destination for authentic Indian culinary heritage, slow-cooked Bengali curries, and grand banquet milestones.
+          </p>
+          <div class="flex items-center gap-2 text-gold-400 font-bold font-mono text-sm">
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:+919851817979" class="hover:underline">+91 98518 17979</a>
+          </div>
+
+          <!-- Official Social Icons -->
+          <div class="pt-2">
+            <div class="text-[10px] uppercase tracking-widest text-[#aba698] font-bold mb-2">Connect With Us</div>
+            <div class="flex items-center gap-2.5">
+              <!-- Instagram -->
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-surface border border-gold-400/30 flex items-center justify-center text-gold-400 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-500 hover:text-white hover:border-transparent transition-all shadow-sm" aria-label="Instagram">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <!-- Real WhatsApp -->
+              <a href="https://wa.me/919851817979" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-surface border border-emerald-500/40 flex items-center justify-center text-emerald-400 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all shadow-sm" aria-label="WhatsApp">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.661 1.434 5.176L2 22l4.981-1.306C8.423 21.534 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.273c-1.637 0-3.153-.473-4.437-1.288l-.318-.202-3.232.848.863-3.15-.209-.333C3.784 14.807 3.273 13.447 3.273 12c0-4.812 3.915-8.727 8.727-8.727s8.727 3.915 8.727 8.727-3.915 8.727-8.727 8.727z"/></svg>
+              </a>
+              <!-- Google Maps -->
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Sudhamrit+Restaurant%2C+Asansol" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-surface border border-gold-400/30 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-black transition-all shadow-sm" aria-label="Google Maps">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <div class="text-[11px] uppercase tracking-widest text-gold-400 font-bold mb-3">Pages &amp; Navigation</div>
+          <ul class="space-y-2 text-xs text-[#d8d4c8] font-semibold">
+            <li><a href="index.html" class="hover:text-gold-400 transition-colors">Home &middot; Overview</a></li>
+            <li><a href="index.html#signatures" class="hover:text-gold-400 transition-colors">Chef Signatures</a></li>
+            <li><a href="menu.html" class="text-gold-400">Digital Food Menu</a></li>
+            <li><a href="index.html#banquet" class="hover:text-gold-400 transition-colors">Banquets &amp; Weddings</a></li>
+            <li><a href="index.html#gallery" class="hover:text-gold-400 transition-colors">Visual Gallery</a></li>
+            <li><a href="index.html#visit" class="hover:text-gold-400 transition-colors">Location &amp; GPS Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Banquets -->
+        <div>
+          <div class="text-[11px] uppercase tracking-widest text-gold-400 font-bold mb-3 flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Kitchen Timings</span>
+          </div>
+          <p class="text-xs text-[#d8d4c8] leading-relaxed mb-2.5">
+            <strong>Dine-in Daily:</strong> 12:00 PM &ndash; 10:00 PM<br/>
+            <strong>Banquet Desk:</strong> 10:00 AM &ndash; 9:00 PM
+          </p>
+          <a href="https://wa.me/919851817979?text=Hi%2C%20I%20would%20like%20to%20reserve%20a%20table%20at%20Sudhamrit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs font-semibold hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all">
+            <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.661 1.434 5.176L2 22l4.981-1.306C8.423 21.534 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.273c-1.637 0-3.153-.473-4.437-1.288l-.318-.202-3.232.848.863-3.15-.209-.333C3.784 14.807 3.273 13.447 3.273 12c0-4.812 3.915-8.727 8.727-8.727s8.727 3.915 8.727 8.727-3.915 8.727-8.727 8.727z"/></svg>
+            <span>WhatsApp Order / Table</span>
+          </a>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <div class="text-[11px] uppercase tracking-widest text-gold-400 font-bold mb-3 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current text-gold-400" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <span>Address &amp; Landmark</span>
+          </div>
+          <address class="not-italic text-xs text-[#d8d4c8] leading-relaxed mb-3">
+            30, Bastin Bazar, G.T. Road,<br/>
+            Opposite Town Inspector Office,<br/>
+            Asansol, West Bengal &mdash; 713301
+          </address>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Sudhamrit+Restaurant%2C+Asansol" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-gold-400 hover:text-white font-bold transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <span>Get Driving Directions &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-6 border-t border-gold-400/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#aba698]">
+        <div>
+          &copy; <span id="current-year"></span> Sudhamrit Banquet &amp; Restaurant. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4 sm:gap-6 font-semibold">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 text-[#d8d4c8]">
+            <svg class="w-3.5 h-3.5 fill-current text-gold-400" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <span class="text-white/20">&middot;</span>
+          <a href="https://wa.me/919851817979" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-[#d8d4c8]">
+            <svg class="w-3.5 h-3.5 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.661 1.434 5.176L2 22l4.981-1.306C8.423 21.534 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.273c-1.637 0-3.153-.473-4.437-1.288l-.318-.202-3.232.848.863-3.15-.209-.333C3.784 14.807 3.273 13.447 3.273 12c0-4.812 3.915-8.727 8.727-8.727s8.727 3.915 8.727 8.727-3.915 8.727-8.727 8.727z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <span class="text-white/20">&middot;</span>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Sudhamrit+Restaurant%2C+Asansol" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 text-[#d8d4c8]">
+            <svg class="w-3.5 h-3.5 fill-current text-gold-400" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <span>Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================== MOBILE STICKY FLOATING ACTION BAR ======================== -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-noir/95 backdrop-blur-xl border-t border-gold-400/25 p-2 flex items-center justify-around gap-1">
+    <a href="index.html" class="flex-1 py-1.5 text-center text-[10px] font-bold text-white hover:text-gold-400 flex flex-col items-center gap-0.5">
+      <i data-lucide="home" class="w-4 h-4 text-gold-400"></i>
+      <span>Home</span>
+    </a>
+    <a href="menu.html" class="flex-1 py-1.5 text-center text-[10px] font-bold text-gold-400 bg-gold-400/15 rounded-lg border border-gold-400/40 flex flex-col items-center gap-0.5">
+      <i data-lucide="utensils" class="w-4 h-4 text-gold-400"></i>
+      <span>Menu</span>
+    </a>
+    <a href="tel:+919851817979" class="flex-1 py-1.5 text-center text-[10px] font-bold text-white hover:text-gold-400 flex flex-col items-center gap-0.5">
+      <i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>
+      <span>Call Desk</span>
+    </a>
+    <a href="https://wa.me/919851817979" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 text-center text-[10px] font-bold text-emerald-400 hover:text-white flex flex-col items-center gap-0.5">
+      <svg class="w-4 h-4 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.661 1.434 5.176L2 22l4.981-1.306C8.423 21.534 10.154 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.273c-1.637 0-3.153-.473-4.437-1.288l-.318-.202-3.232.848.863-3.15-.209-.333C3.784 14.807 3.273 13.447 3.273 12c0-4.812 3.915-8.727 8.727-8.727s8.727 3.915 8.727 8.727-3.915 8.727-8.727 8.727z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Primary Application Script -->
+  <script src="main.js"></script>
+</body>
+</html>
